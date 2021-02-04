@@ -1,0 +1,83 @@
+@import './reset.css';
+
+:root {
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+.imagePlaceholder {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.imagePlaceholder:empty::after,
+.cardName:empty::after {
+  content: 'Unknown';
+}
+
+.cardsContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.cardWrapper {
+  display: flex;
+  align-items: stretch;
+  margin: 2rem 1rem;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  text-align: center;
+}
+
+.imageWrapper {
+  width: inherit;
+  height: 320px;
+  position: relative;
+  overflow: hidden;
+}
+
+.imagePlacement {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.cardImage {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  object-position: top;
+}
+
+.cardName {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.cardDescription {
+  margin-bottom: 10px;
+  color: gray;
+}
+
+.icon {
+ border: solid 1px gray;
+ padding: 5px;
+ margin-left: 3px;
+}
+
+.icon:hover{
+  background-color:yellow;
+}
